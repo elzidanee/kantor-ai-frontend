@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #0b0f19;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent),
+    radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.08), transparent);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 6px;
+  border: 2px solid #0b1120;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Plumbob Diamond Animation (Legacy) */
+@keyframes plumbobFloat {
+  0%, 100% {
+    transform: translateY(0px) rotateY(0deg) scale(1);
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.75));
+  }
+  50% {
+    transform: translateY(-8px) rotateY(180deg) scale(1.08);
+    filter: drop-shadow(0 0 16px rgba(34, 197, 94, 1));
+  }
+}
+
+.animate-plumbob {
+  animation: plumbobFloat 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* Ultra Smooth Realistic Walking Gait & Bobbing */
+@keyframes walkBobbing {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(-1.2deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-3px) rotate(1.2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-walk-bobbing {
+  animation: walkBobbing 0.52s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* Walking Dynamic Footprint Shadow */
+@keyframes walkShadowPulse {
+  0%, 50%, 100% { transform: scale(1); opacity: 0.7; }
+  25%, 75% { transform: scale(0.85); opacity: 0.45; }
+}
+
+.animate-walk-shadow {
+  animation: walkShadowPulse 0.52s ease-in-out infinite;
+}
+
+/* Subtle Character Idle Breathing */
+@keyframes simBreathing {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-2.5px) scale(1.008); }
+}
+
+.animate-sim-idle {
+  animation: simBreathing 3.5s ease-in-out infinite;
+}
+
+/* Speech Bubble Floating */
+@keyframes floatBubble {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: floatBubble 2.6s ease-in-out infinite;
+}
+
+/* Screen Typing Glow */
+@keyframes screenGlow {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.4)); }
+  50% { filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.8)); }
+}
+
+.animate-screen-glow {
+  animation: screenGlow 1.8s ease-in-out infinite;
+}
+
+/* Floor Parquet Pattern */
+.bg-parquet {
+  background-color: #1e1b18;
+  background-image: 
+    linear-gradient(45deg, #2a241e 25%, transparent 25%),
+    linear-gradient(-45deg, #2a241e 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #2a241e 75%),
+    linear-gradient(-45deg, transparent 75%, #2a241e 75%);
+  background-size: 24px 24px;
+}
+
+/* Grass Lawn Pattern */
+.bg-grass {
+  background-color: #064e3b;
+  background-image: radial-gradient(#047857 15%, transparent 16%);
+  background-size: 16px 16px;
+}
+
+/* Mushola Carpet Pattern */
+.bg-mushola {
+  background-color: #062f28;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.15) 2px, transparent 2px);
+  background-size: 18px 18px;
+}
+
+/* Restroom Ceramic Tile Pattern */
+.bg-ceramic {
+  background-color: #0f172a;
+  background-image: 
+    linear-gradient(#1e293b 1px, transparent 1px),
+    linear-gradient(90deg, #1e293b 1px, transparent 1px);
+  background-size: 20px 20px;
+}
